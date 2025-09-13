@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja" data-address="岐阜県岐阜市○○" data-phone="000-000-0000" data-hours="11:00-22:00" data-reserve-url="https://example.com/reserve">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KU-DETA</title>
+  <meta name="description" content="肉とチーズで、心も体も元気に。アメリカ4都市を巡るような、活気あふれるオープンキッチン。" />
+  <meta property="og:title" content="KU-DETA" />
+  <meta property="og:description" content="肉とチーズで、心も体も元気に。アメリカ4都市を巡るような、活気あふれるオープンキッチン。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://placehold.co/1200x630?text=OGP" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "KU-DETA",
+    "image": "https://placehold.co/800x600?text=KU-DETA",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "岐阜県岐阜市○○",
+      "addressLocality": "岐阜市",
+      "addressRegion": "岐阜県",
+      "postalCode": "000-0000",
+      "addressCountry": "JP"
+    },
+    "telephone": "000-000-0000",
+    "priceRange": "¥¥",
+    "servesCuisine": ["American","Pizza","Pasta","Cheese","Steak"],
+    "openingHours": "11:00-22:00",
+    "acceptsReservations": true
+  }
+  </script>
+</head>
+<body>
+  <header id="top" class="site-header">
+    <nav class="nav" aria-label="メイン">
+      <a href="#top" class="logo">KU-DETA</a>
+      <ul class="nav-links">
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#course">コース</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#reserve" class="btn-reserve">席を予約する</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="hero" aria-label="ヒーロー">
+      <h1>肉とチーズで、心も体も元気に。</h1>
+      <p>アメリカ4都市を巡るような、活気あふれるオープンキッチン。</p>
+      <div class="cta-group">
+        <a href="#reserve" class="btn">席を予約する</a>
+        <a href="#course" class="btn secondary">コースを見る</a>
+      </div>
+      <img src="https://placehold.co/1200x600?text=Hero" alt="店内の雰囲気" loading="lazy" />
+    </section>
 
+    <section id="concept" class="concept" aria-labelledby="concept-heading">
+      <h2 id="concept-heading">コンセプト</h2>
+      <p>KU-DETAは、肉とチーズを主役に“心も体も元気にする”時間をお届けします。ニューヨークの洗練、ロサンゼルスの軽やかさ、シカゴの力強さ、オースティンのスパイス——4つの街のエッセンスを空間と料理に。40席のテーブル、6席のカウンター、オープンキッチンのライブ感をどうぞ。</p>
+      <div class="city-badges">
+        <span class="badge">NY</span>
+        <span class="badge">LA</span>
+        <span class="badge">Chicago</span>
+        <span class="badge">Austin</span>
+      </div>
+    </section>
+
+    <section id="menu" class="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">メニュー</h2>
+      <div class="tabs">
+        <button class="tab active" data-target="lunch">ランチ</button>
+        <button class="tab" data-target="dinner">ディナー</button>
+      </div>
+      <div id="lunch" class="tab-panel active">
+        <h3>昼から全力チャージ。</h3>
+        <p>牛カツ／チーズフォンデュ／ハンバーグ／ステーキ。前菜&自家製ハムのパワーサラダ付き。チーズフォンデュ以外はライス付き。</p>
+        <ul class="menu-list">
+          <li>牛カツ <span class="tag">人気</span></li>
+          <li>チーズフォンデュ <span class="tag">定番</span></li>
+          <li>ハンバーグ</li>
+          <li>ステーキ</li>
+        </ul>
+      </div>
+      <div id="dinner" class="tab-panel">
+        <h3>アメリカン×イタリアンの良いとこ取り。</h3>
+        <p>ワカモレやファヒータに、焼きたてピザとアルデンテのパスタ。肉とチーズを主役に。</p>
+        <ul class="menu-list">
+          <li>ワカモレ <span class="tag">定番</span></li>
+          <li>ファヒータ</li>
+          <li>シカゴピザ <span class="tag">限定</span></li>
+          <li>パスタ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="course" class="course" aria-labelledby="course-heading">
+      <h2 id="course-heading">コース & 飲み放題</h2>
+      <div class="course-cards">
+        <article class="course-card">
+          <h3>¥4,000コース</h3>
+          <ul>
+            <li>前菜</li>
+            <li>肉料理</li>
+            <li>デザート</li>
+          </ul>
+        </article>
+        <article class="course-card">
+          <h3>¥5,000コース</h3>
+          <ul>
+            <li>前菜</li>
+            <li>肉料理</li>
+            <li>チーズ料理</li>
+            <li>デザート</li>
+          </ul>
+        </article>
+        <article class="course-card">
+          <h3>¥6,000コース</h3>
+          <ul>
+            <li>前菜</li>
+            <li>肉料理</li>
+            <li>シェフ特製料理</li>
+            <li>デザート</li>
+          </ul>
+        </article>
+      </div>
+      <p>飲み放題：アルコール ¥2,000／ノンアル ¥1,500</p>
+      <p>お祝いプレート ¥550（一言メッセージを添えて）</p>
+    </section>
+
+    <section id="dessert" class="dessert" aria-labelledby="dessert-heading">
+      <h2 id="dessert-heading">スペシャリテ & デザート</h2>
+      <p>自家製バスク／カタラーナ／プリン＋<span class="tag">今月の限定</span>チーズケーキ</p>
+      <img src="https://placehold.co/800x500?text=Dessert" alt="デザート" loading="lazy" />
+    </section>
+
+    <section id="wine" class="wine" aria-labelledby="wine-heading">
+      <h2 id="wine-heading">ワイン</h2>
+      <p>アメリカワイン中心。肉とチーズに寄り添う一本を。</p>
+      <img src="https://placehold.co/800x400?text=Wine" alt="ワイン" loading="lazy" />
+    </section>
+
+    <section id="space" class="space" aria-labelledby="space-heading">
+      <h2 id="space-heading">空間</h2>
+      <p>40席のテーブル、6席のカウンター、オープンキッチン。</p>
+      <div class="city-grid">
+        <img src="https://placehold.co/400x300?text=NY" alt="NYのテイスト" loading="lazy" />
+        <img src="https://placehold.co/400x300?text=LA" alt="LAのテイスト" loading="lazy" />
+        <img src="https://placehold.co/400x300?text=Chicago" alt="Chicagoのテイスト" loading="lazy" />
+        <img src="https://placehold.co/400x300?text=Austin" alt="Austinのテイスト" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">ギャラリー</h2>
+      <div class="gallery-grid">
+        <img src="https://placehold.co/300x300?text=1" alt="料理1" loading="lazy" />
+        <img src="https://placehold.co/300x300?text=2" alt="料理2" loading="lazy" />
+        <img src="https://placehold.co/300x300?text=3" alt="料理3" loading="lazy" />
+        <img src="https://placehold.co/300x300?text=4" alt="料理4" loading="lazy" />
+        <img src="https://placehold.co/300x300?text=5" alt="料理5" loading="lazy" />
+        <img src="https://placehold.co/300x300?text=6" alt="料理6" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="access" class="access" aria-labelledby="access-heading">
+      <h2 id="access-heading">アクセス</h2>
+      <div id="map" class="map" aria-label="地図">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.9096784568703!2d139.76712541525818!3d35.68123648019372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQwJzUzLjYiTiAxMznCsDQ2JzAxLjciRQ!5e0!3m2!1sja!2sjp!4v0000000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="reserve" class="reserve" aria-labelledby="reserve-heading">
+      <h2 id="reserve-heading">予約</h2>
+      <form id="reserve-form">
+        <label>お名前<input type="text" name="name" required></label>
+        <label>メール<input type="email" name="email" required></label>
+        <label>人数<input type="number" name="people" min="1" required></label>
+        <label>日時<input type="datetime-local" name="datetime" required></label>
+        <label>メッセージ<textarea name="message"></textarea></label>
+        <button type="submit">送信</button>
+      </form>
+    </section>
+
+    <section id="instagram" class="instagram" aria-labelledby="insta-heading">
+      <h2 id="insta-heading">Instagram</h2>
+      <div class="instagram-embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/xxxxxxxxx" data-instgrm-version="14" style=" background:#FFF; border:0; margin:1px; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote>
+        <script async src="https://www.instagram.com/embed.js"></script>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="フッター">
+    <p id="footer-address"></p>
+    <p id="footer-hours"></p>
+    <p id="footer-phone"></p>
+    <p>&copy; KU-DETA</p>
+  </footer>
+</body>
+</html>

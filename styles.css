@@ -1,0 +1,40 @@
+:root {
+  --red: #b22222;
+  --cream: #fff7e6;
+  --charcoal: #333;
+  --accent: #ff4081;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  body { background: #000; color: #eee; }
+}
+a { color: var(--red); text-decoration: none; }
+header, nav, main, section, footer { padding: 1rem; }
+.hero { text-align: center; padding: 4rem 1rem; background: var(--cream); }
+.hero .btn { margin: 0.5rem; padding: 0.75rem 1.5rem; background: var(--red); color: #fff; border-radius: 4px; }
+.hero .btn.secondary { background: var(--accent); }
+.nav { display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; background:#fff; }
+.nav-links { display:flex; gap:1rem; list-style:none; }
+.tabs { display:flex; gap:1rem; }
+.tab { padding:0.5rem 1rem; background:var(--cream); border:none; cursor:pointer; }
+.tab.active { background:var(--red); color:#fff; }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; }
+.menu-list { list-style:none; padding:0; }
+.tag { background:var(--red); color:#fff; padding:0 0.25rem; border-radius:3px; font-size:0.8rem; }
+.course-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+.city-grid, .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+.map iframe { width:100%; height:450px; }
+footer { text-align:center; background:var(--cream); }
+@media (min-width:768px) {
+  header, nav, main, section, footer { padding:2rem; }
+}
