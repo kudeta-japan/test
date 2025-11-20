@@ -1,580 +1,437 @@
-<!DOCTYPE html>
-<html lang="ja" data-seo-title="KU-DETA | 肉とチーズで心も体も元気に" data-seo-description="岐阜市・KU-DETAの公式サイト。NY/LA/Chicago/Austinの4都市エッセンスが息づく活気あるオープンキッチンで、肉とチーズを全身で味わう時間を。ランチ・ディナー・コース・飲み放題・記念日プレートのご案内。">
+<!doctype html>
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KU-DETA | 肉とチーズで心も体も元気に</title>
-  <meta name="description" content="岐阜市・KU-DETAの公式サイト。NY/LA/Chicago/Austinの4都市エッセンスが息づく活気あるオープンキッチンで、肉とチーズを全身で味わう時間を。ランチ・ディナー・コース・飲み放題・記念日プレートのご案内。" />
-  <meta property="og:title" content="KU-DETA | 肉とチーズで心も体も元気に" />
-  <meta property="og:description" content="ニューヨーク・ロサンゼルス・シカゴ・オースティンのエネルギーを閉じ込めた岐阜市の肉とチーズレストランKU-DETA。ランチ・ディナー・コースの予約受付中。" />
+  <title>岐阜駅の赤身ステーキ・牛カツ・チーズフォンデュ｜KU-DETA（クーデター）</title>
+  <meta name="description" content="岐阜駅徒歩10分。赤身ステーキ300g・牛カツ・チーズフォンデュが名物のKU-DETA。女子会・誕生日・貸切可。駐車場あり。24時間ネット予約対応。" />
+  <link rel="canonical" href="https://www.ku-deta.jp/" />
+  <meta name="format-detection" content="telephone=yes, address=no, email=no" />
+  
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1604908177093-3fb91f091c50?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:title" content="岐阜駅の赤身ステーキ・牛カツ・チーズフォンデュ｜KU-DETA" />
+  <meta property="og:description" content="赤身ステーキ・牛カツ・チーズフォンデュが名物。24時間ネット予約OK。" />
+  <meta property="og:url" content="https://www.ku-deta.jp/" />
+  <meta property="og:image" content="https://www.ku-deta.jp/shared/img/shared/ogp.png" />
+  <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://example.com/" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- GA4（測定IDを差し替え） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // TODO: GA4の測定IDに置換
+  </script>
+
+  <style>
+    :root{
+      --brand:#111;
+      --accent:#d69e2e; /* チーズ色イメージ */
+      --text:#222; --muted:#666; --bg:#fffdfa;
+      --container: min(1200px, 94vw);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:-apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;color:var(--text);background:#fff}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;height:auto;}
+    .container{width:var(--container);margin-inline:auto}
+    header.site-header{position:sticky;top:0;background:#fffdfb;border-bottom:1px solid #eee;z-index:40}
+    .topbar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:140px;height:auto}
+    nav.mainnav{display:flex;gap:18px;flex-wrap:wrap}
+    nav.mainnav a{padding:10px 8px;border-radius:10px;font-weight:600}
+    nav.mainnav a:hover{background:#faf6e6}
+    .cta-group{display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:12px 16px;border-radius:999px;font-weight:700;border:1px solid #111}
+    .btn--primary{background:var(--accent);border-color:var(--accent)}
+    .btn--ghost{background:#fff}
+
+    /* Hero */
+    .hero{position:relative;background:linear-gradient(180deg,#fff 0,#fffdfa 100%)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:36px 0}
+    .hero h1{font-size:clamp(22px,3vw,36px);line-height:1.25;margin:.2em 0}
+    .hero p.lead{font-size:clamp(15px,2.4vw,18px);color:var(--muted)}
+    .hero .kv{border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .badges{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    .badge{background:#111;color:#fff;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    /* Feature cards */
+    .features{padding:28px 0 8px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid #eee;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .card-body{padding:16px}
+    .card h3{margin:0 0 8px;font-size:20px}
+    .price{font-weight:800}
+    .mini{color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{padding:36px 0}
+    h2.sec-ttl{font-size:clamp(18px,2.6vw,28px);margin:0 0 12px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .list{display:grid;gap:10px}
+
+    /* Reviews */
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .review{background:#fff;border:1px solid #eee;border-radius:16px;padding:16px}
+
+    /* Blog */
+    .blog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .post{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden}
+    .post .p-body{padding:14px}
+    .post time{color:var(--muted);font-size:12px}
+
+    /* Footer */
+    footer{background:#111;color:#fff;padding:34px 0;margin-top:20px}
+    footer a{color:#fff}
+    .foot-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+    .foot-info dl{display:grid;grid-template-columns:70px 1fr;gap:4px 12px;margin:8px 0}
+    address{font-style:normal;color:#ddd;margin-top:12px}
+
+    /* Sticky mobile bar */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;display:none;background:#ffffffea;border-top:1px solid #eee;padding:10px;backdrop-filter: blur(6px);z-index:50}
+    .sticky-cta .container{display:flex;gap:10px}
+    .sticky-cta .btn{flex:1}
+
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+      .blog-list{grid-template-columns:1fr}
+      nav.mainnav{display:none}
+      .sticky-cta{display:block}
+      .topbar{padding:8px 0}
+    }
+  </style>
 </head>
-<body data-address="岐阜県岐阜市〇〇町1-2-3" data-hours="ランチ 11:30-15:00 (L.O.14:00) / ディナー 17:30-23:00 (L.O.22:00)" data-phone="058-000-0000" data-reservation-url="https://example.com/reserve" data-instagram="@ku_deta_gifu" data-seats="テーブル40席 / カウンター6席">
-  <a class="visually-hidden" href="#main">メインコンテンツへ移動</a>
-  <header data-shrink="false">
-    <div class="header-inner">
-      <div class="brand" aria-label="KU-DETA">
-        <span>KU-DETA</span>
-      </div>
-      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開閉" aria-expanded="false">☰</button>
-      <nav aria-label="主要ナビゲーション" aria-expanded="false">
-        <a href="#concept">コンセプト</a>
-        <a href="#menu">メニュー</a>
-        <a href="#course">コース</a>
-        <a href="#wine">ワイン</a>
-        <a href="#space">空間</a>
-        <a href="#access">アクセス</a>
-        <a href="#reserve">予約</a>
+
+<body>
+  <header class="site-header">
+    <div class="container topbar" role="navigation" aria-label="サイトヘッダー">
+      <a class="brand" href="/" aria-label="KU-DETA ホームへ">
+        <img src="/shared/img/shared/logo.jpg" alt="KU-DETA ロゴ" loading="lazy" />
+        <span class="mini">CHEESE MEAT MANIA KU-DETA</span>
+      </a>
+      <nav class="mainnav" aria-label="グローバルナビゲーション">
+        <a href="/menu/">メニュー</a>
+        <a href="/steak/">赤身ステーキ</a>
+        <a href="/gyukatsu/">牛カツ</a>
+        <a href="/cheese-fondue/">チーズフォンデュ</a>
+        <a href="/course/">コース</a>
+        <a href="/floor/">席・貸切</a>
+        <a href="/access/">アクセス</a>
+        <a href="/blog/">ブログ</a>
       </nav>
-      <a class="reserve-button" data-reserve-link href="#reserve">席を予約する</a>
+      <div class="cta-group">
+        <a class="btn btn--ghost" href="tel:0582742212" aria-label="電話で問い合わせ 058-274-2212">電話</a>
+        <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener" aria-label="24時間ネット予約">24時間予約</a>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="hero" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <h1 id="hero-heading">肉とチーズで、心も体も元気に。</h1>
-        <p>アメリカ4都市を巡るような、活気あふれるオープンキッチン。</p>
-        <div class="hero-actions">
-          <a class="primary" data-reserve-link href="#reserve">席を予約する</a>
-          <a class="secondary" href="#course">コースを見る</a>
-          <a class="secondary" data-phone-link href="tel:0580000000">電話で相談</a>
-        </div>
-        <div class="badges" aria-label="店舗情報">
-          <span class="badge">Open Kitchen</span>
-          <span class="badge">Meat &amp; Cheese</span>
-          <span class="badge">NY / LA / Chicago / Austin</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="concept" aria-labelledby="concept-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="concept-heading">コンセプト</h2>
-          <p class="section-subtitle">KU-DETAは、肉とチーズを主役に“心も体も元気にする”時間をお届けします。ニューヨークの洗練、ロサンゼルスの軽やかさ、シカゴの力強さ、オースティンのスパイス——4つの街のエッセンスを空間と料理に。40席のテーブル、6席のカウンター、オープンキッチンのライブ感をどうぞ。</p>
-        </div>
-        <div class="city-grid">
-          <article class="city-card">
-            <h3>New York</h3>
-            <p><span class="tag">洗練</span>ネオンが灯るナイトライフをイメージしたカクテルカウンター。</p>
-          </article>
-          <article class="city-card">
-            <h3>Los Angeles</h3>
-            <p><span class="tag">ヘルシー</span>旬野菜と発酵を取り入れたパワーサラダ＆チーズフォンデュ。</p>
-          </article>
-          <article class="city-card">
-            <h3>Chicago</h3>
-            <p><span class="tag">ディープ</span>肉厚なシカゴピザとスモーク香るグリルゾーン。</p>
-          </article>
-          <article class="city-card">
-            <h3>Austin</h3>
-            <p><span class="tag">BBQ</span>スパイスが効いたファヒータとライブ感満点のグリル台。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="menu" aria-labelledby="menu-heading">
-      <div class="container menu-tabs">
-        <div class="section-header">
-          <h2 class="section-title" id="menu-heading">ランチ &amp; ディナー</h2>
-          <p class="section-subtitle">昼から全力チャージ。夜はアメリカン×イタリアンの良いとこ取り。</p>
-        </div>
-        <div class="menu-tablist" role="tablist" aria-label="メニュータブ">
-          <button role="tab" aria-selected="true" aria-controls="lunch-panel" id="tab-lunch">ランチ</button>
-          <button role="tab" aria-selected="false" aria-controls="dinner-panel" id="tab-dinner" tabindex="-1">ディナー</button>
-          <button role="tab" aria-selected="false" aria-controls="dessert-panel" id="tab-dessert" tabindex="-1">デザート</button>
-        </div>
-        <div id="lunch-panel" class="menu-panel" role="tabpanel" aria-labelledby="tab-lunch" aria-hidden="false">
-          <article class="menu-item">
-            <div class="details">
-              <strong>牛カツランチ <span class="highlight-tag">人気</span></strong>
-              <p>肉厚な牛カツと自家製ハムのパワーサラダ。ライス付きで満足度◎。</p>
-            </div>
-            <span class="price">¥1,600</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>チーズフォンデュランチ <span class="highlight-tag">限定</span></strong>
-              <p>4種チーズの濃厚フォンデュをアメリカ西海岸スタイルで。</p>
-            </div>
-            <span class="price">¥1,800</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>ハンバーグプレート <span class="highlight-tag">定番</span></strong>
-              <p>鉄板で焼き上げるジューシーなハンバーグ。ライス＆サラダ付き。</p>
-            </div>
-            <span class="price">¥1,500</span>
-          </article>
-        </div>
-        <div id="dinner-panel" class="menu-panel" role="tabpanel" aria-labelledby="tab-dinner" aria-hidden="true">
-          <article class="menu-item">
-            <div class="details">
-              <strong>ワカモレ &amp; トルティーヤ <span class="highlight-tag">人気</span></strong>
-              <p>オースティンを感じるスモーキーなチリライムワカモレ。</p>
-            </div>
-            <span class="price">¥900</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>ファヒータ鉄板 <span class="highlight-tag">ライブ感</span></strong>
-              <p>オープンキッチンで仕上げるシズルたっぷりのファヒータ。</p>
-            </div>
-            <span class="price">¥1,600</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>シカゴピザ <span class="highlight-tag">厚焼</span></strong>
-              <p>肉とチーズを層に重ねたディープディッシュ。焼き立てをテーブルへ。</p>
-            </div>
-            <span class="price">¥1,800</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>USリブアイステーキ</strong>
-              <p>NYのステーキハウスを思わせる分厚いカット。特製バターで。</p>
-            </div>
-            <span class="price">¥2,800</span>
-          </article>
-        </div>
-        <div id="dessert-panel" class="menu-panel" role="tabpanel" aria-labelledby="tab-dessert" aria-hidden="true">
-          <article class="menu-item">
-            <div class="details">
-              <strong>自家製バスクチーズケーキ <span class="highlight-tag">定番</span></strong>
-              <p>表面は香ばしく、中はとろり。赤ワインとのペアリングも◎。</p>
-            </div>
-            <span class="price">¥620</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>カタラーナ</strong>
-              <p>濃厚なチーズクリームを凍らせ、仕上げにキャラメリゼ。</p>
-            </div>
-            <span class="price">¥600</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>プリン</strong>
-              <p>どこか懐かしいリッチプリン。ほろ苦カラメルがアクセント。</p>
-            </div>
-            <span class="price">¥500</span>
-          </article>
-          <article class="menu-item">
-            <div class="details">
-              <strong>今月の限定チーズケーキ <span class="highlight-tag">今月の限定</span></strong>
-              <p>季節のチーズとフルーツをかけ合わせたスペシャルスイーツ。</p>
-            </div>
-            <span class="price">¥700</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="course" aria-labelledby="course-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="course-heading">コース &amp; 飲み放題</h2>
-          <p class="section-subtitle">シーンに合わせて選べる3コース。飲み放題はアルコール¥2,000／ノンアル¥1,500。</p>
-        </div>
-        <div class="course-comparison">
-          <table class="course-table" aria-describedby="course-heading">
-            <thead>
-              <tr>
-                <th scope="col">コース名</th>
-                <th scope="col">価格</th>
-                <th scope="col">内容</th>
-                <th scope="col">おすすめシーン</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Standard</th>
-                <td>¥4,000</td>
-                <td>前菜盛合せ／パワーサラダ／メイン（肉 or 魚）／デザート</td>
-                <td>初めてのご来店やカジュアルなお集まりに。</td>
-              </tr>
-              <tr>
-                <th scope="row">Signature</th>
-                <td>¥5,000</td>
-                <td>ライブキッチン前菜／シカゴピザ／USステーキ／バスクチーズケーキ</td>
-                <td>記念日や大切なディナーに。メッセージプレート対応可。</td>
-              </tr>
-              <tr>
-                <th scope="row">Chef's Choice</th>
-                <td>¥6,000</td>
-                <td>シェフおまかせタパス／リブアイ＆ファヒータ／限定チーズケーキ</td>
-                <td>接待やパーティーで料理をしっかり楽しみたい方へ。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card-grid two" style="margin-top:2rem;">
-          <article class="card">
-            <h3>飲み放題</h3>
-            <ul>
-              <li>アルコール ¥2,000（クラフトビール・ワイン・ハイボール）</li>
-              <li>ノンアル ¥1,500（自家製レモネード・ティーソーダなど）</li>
-              <li>90分制／ラストオーダーは15分前</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>メッセージプレート</h3>
-            <p>お祝いプレート ¥550（デザート＋お祝いメッセージ）。記念日や送別会に。</p>
-            <a class="reserve-button" data-reserve-link href="#reserve" style="justify-self:flex-start;">記念日相談</a>
-          </article>
-        </div>
-        <div class="faq-list" style="margin-top:2.5rem;">
-          <div class="faq-item">
-            <h3>予約はいつまでに必要？</h3>
-            <p>週末は特に混み合います。オンライン予約フォームまたはお電話にてお早めにご連絡ください。</p>
+  <main id="content" class="site-content" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <h1 id="hero-title">岐阜駅の<strong>赤身ステーキ</strong>・<strong>牛カツ</strong>・<strong>チーズフォンデュ</strong>ならKU-DETA</h1>
+          <p class="lead">脂に頼らない旨みの赤身、衣サクッとレアな牛カツ、とろける濃厚チーズ。女子会や誕生日、貸切もOK。駐車場あり。</p>
+          <div class="badges">
+            <span class="badge">岐阜駅 徒歩10分</span>
+            <span class="badge">最大40名 貸切可</span>
+            <span class="badge">駐車場25台</span>
           </div>
-          <div class="faq-item">
-            <h3>人数変更は可能？</h3>
-            <p>前日までにお電話いただければ柔軟に調整いたします。当日キャンセルはコース料金を頂戴する場合がございます。</p>
-          </div>
-          <div class="faq-item">
-            <h3>アレルギー対応は？</h3>
-            <p>可能な限り対応いたします。ご予約時に詳細をお知らせください。</p>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">空席状況を見る（24H）</a>
+            <a class="btn btn--ghost" href="tel:0582742212">電話で相談</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="specialty" aria-labelledby="specialty-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="specialty-heading">スペシャリテ &amp; デザート</h2>
-          <p class="section-subtitle">肉とチーズのシグネチャーに、毎月限定のチーズケーキまで。</p>
-        </div>
-        <div class="card-grid three">
-          <article class="card">
-            <h3>NYカット ステーキ</h3>
-            <p>シグネチャーのUSリブアイを高温で焼き上げ、仕上げに骨髄バターを添えます。</p>
-          </article>
-          <article class="card">
-            <h3>LAグリーン パワーサラダ</h3>
-            <p>自家製ハムと発酵ドレッシング、季節のフルーツをのせた彩りサラダ。</p>
-          </article>
-          <article class="card">
-            <h3>今月の限定チーズケーキ</h3>
-            <p>旬の食材を合わせたスペシャルチーズケーキ。Instagramで今月のフレーバーを発信中。</p>
-          </article>
+        <div class="kv" aria-hidden="true">
+          <picture>
+            <source srcset="/shared/img/hero.webp" type="image/webp" />
+            <img src="/shared/img/hero.jpg" alt="赤身ステーキ・牛カツ・チーズフォンデュのイメージ" width="900" height="600" loading="eager" />
+          </picture>
         </div>
       </div>
     </section>
 
-    <section class="section" id="wine" aria-labelledby="wine-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="wine-heading">ワイン &amp; ペアリング</h2>
-          <p class="section-subtitle">アメリカワイン中心。肉とチーズに寄り添う一本をソムリエがご提案。</p>
-        </div>
-        <div class="wine-grid">
-          <article class="wine-card">
-            <h3>グラスワイン</h3>
-            <p>カリフォルニアのシャルドネやオレゴンのピノ・ノワールを日替わりで。</p>
-            <p>牛カツにはナパのカベルネ、チーズフォンデュにはソノマのシャルドネを。</p>
-          </article>
-          <article class="wine-card">
-            <h3>ボトルセレクション</h3>
-            <p>テキサス・ハイプレーンズのジンファンデルやNYフィンガーレイクスのリースリングなど多彩に。</p>
-            <p>NYカットステーキにはカリフォルニアのボルドーブレンドを。</p>
-          </article>
-          <article class="wine-card">
-            <h3>ノンアルコール</h3>
-            <p>自家製クラフトコーラやビーツレモネードで乾杯。お子様やドライバーにも。</p>
-            <p>ファヒータにはチリライムスパーク、デザートにはハニーアールグレイティーを。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="space" aria-labelledby="space-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="space-heading">空間紹介</h2>
-          <p class="section-subtitle">オープンキッチンと4都市の世界観が交錯する活気あるフロア。<span data-bind="seats"></span></p>
-        </div>
-        <div class="card-grid two">
-          <article class="card">
-            <h3>オープンキッチン</h3>
-            <p>ライブで焼き上がるステーキやファヒータを目の前で楽しめるレイアウト。</p>
-          </article>
-          <article class="card">
-            <h3>ゾーニング</h3>
-            <p>NYラウンジ・LAテラス・シカゴピザベイ・オースティングリルの4ゾーンを回遊。</p>
-          </article>
-        </div>
-        <div class="gallery" aria-label="店内ギャラリー">
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="店内のオープンキッチンの様子" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="テーブル席" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=800&q=80" alt="カウンター席" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="ステーキの盛り付け" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1527169402691-feff5539e52c?auto=format&fit=crop&w=800&q=80" alt="チーズ料理" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=800&q=80" alt="デザート" loading="lazy" />
-        </div>
-        <div class="testimonials" style="margin-top:2rem;">
-          <article class="testimonial">「ライブ感あふれるカウンターでステーキを楽しめるのが最高。記念日プレートも喜んでもらえました。」</article>
-          <article class="testimonial">「ランチの牛カツはサラダもハムもボリュームたっぷり。午後から頑張れるエネルギー補給です。」</article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="gallery" aria-labelledby="gallery-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="gallery-heading">フォトギャラリー</h2>
-          <p class="section-subtitle">撮りたくなる瞬間が連続する、KU-DETAのとっておき。</p>
-        </div>
-        <div class="gallery" aria-label="料理と空間の写真">
-          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="シェアする料理" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80" alt="ワインボトル" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1528834352189-46be05f11536?auto=format&fit=crop&w=800&q=80" alt="カクテル" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80" alt="チーズプレート" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="ピザ" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=800&q=80" alt="ディナータイム" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="access" aria-labelledby="access-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="access-heading">アクセス</h2>
-          <p class="section-subtitle">最寄り駅から徒歩5分。専用駐車場あり。</p>
-        </div>
-        <div class="access-grid">
-          <div>
-            <h3>店舗情報</h3>
-            <p><strong>住所：</strong><span data-bind="address"></span></p>
-            <p><strong>営業時間：</strong><span data-bind="hours"></span></p>
-            <p><strong>電話：</strong><a data-bind="phone" data-phone-link href="tel:0580000000">058-000-0000</a></p>
-            <p><strong>席数：</strong><span data-bind="seats"></span></p>
-            <p><strong>Instagram：</strong><a data-instagram-link data-bind="instagram" href="https://www.instagram.com/ku_deta_gifu/" target="_blank" rel="noopener">@ku_deta_gifu</a></p>
-            <div class="card" style="margin-top:1.5rem;">
-              <h3>アクセスメモ</h3>
-              <ul>
-                <li>名鉄岐阜駅 徒歩5分</li>
-                <li>提携駐車場あり（2時間無料）</li>
-                <li>ベビーカー・車椅子OK</li>
-              </ul>
+    <!-- 名物3本柱 -->
+    <section class="features container" aria-label="名物メニュー">
+      <h2 class="sec-ttl">名物は、この3つ</h2>
+      <div class="cards">
+        <article class="card">
+          <picture>
+            <source srcset="/shared/img/steak.webp" type="image/webp" />
+            <img src="/shared/img/steak.jpg" alt="赤身ステーキ300gの断面" loading="lazy" width="800" height="534">
+          </picture>
+          <div class="card-body">
+            <h3>赤身ステーキ 300g</h3>
+            <p class="mini">表面は香ばしく、中はしっとり。脂より“旨み”で選ぶ方へ。</p>
+            <p class="price">¥3,280〜</p>
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <a class="btn btn--ghost" href="/steak/">詳しく見る</a>
+              <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">このメニューで予約</a>
             </div>
           </div>
-          <div class="map-embed" aria-label="Googleマップ">
-            <iframe title="KU-DETA所在地" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.800887253518!2d136.7606340764449!3d35.40957807265267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a95ec9fe1f7d%3A0xb35a1b5db665d77c!2z5bKp5biD5aSn5a2m!5e0!3m2!1sja!2sjp!4v1700000000000" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="section" id="reserve" aria-labelledby="reserve-heading">
-      <div class="container">
-        <div class="reserve-card">
-          <div>
-            <h2 class="section-title" id="reserve-heading">予約・お問い合わせ</h2>
-            <p>オンラインフォームまたはお電話で承ります。貸切や記念日のご相談もお気軽に。</p>
-            <div class="form-actions" style="padding:0;">
-              <a class="reserve-button" data-phone-link href="tel:0580000000">電話で相談</a>
-              <a class="reserve-button" data-reserve-link href="https://example.com/reserve">外部予約サイト</a>
+        <article class="card">
+          <picture>
+            <source srcset="/shared/img/gyukatsu.webp" type="image/webp" />
+            <img src="/shared/img/gyukatsu.jpg" alt="レア断面の牛カツ" loading="lazy" width="800" height="534">
+          </picture>
+          <div class="card-body">
+            <h3>牛カツ</h3>
+            <p class="mini">二度揚げで衣サクッ、中心レア。香りを閉じ込めて余熱でやわらか。</p>
+            <p class="price">¥2,180〜</p>
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <a class="btn btn--ghost" href="/gyukatsu/">詳しく見る</a>
+              <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">このメニューで予約</a>
             </div>
           </div>
-          <form id="reserve-form" novalidate aria-describedby="reserve-feedback">
-            <label>
-              <span>お名前 *</span>
-              <input type="text" name="name" autocomplete="name" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>メールアドレス *</span>
-              <input type="email" name="email" autocomplete="email" required />
-              <span class="error-message" data-error="email" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>電話番号 *</span>
-              <input type="tel" name="phone" autocomplete="tel" required />
-              <span class="error-message" data-error="phone" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>ご来店日 *</span>
-              <input type="date" name="date" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>ご来店時間 *</span>
-              <input type="time" name="time" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>人数 *</span>
-              <select name="guests" required>
-                <option value="">選択してください</option>
-                <option value="2">2名</option>
-                <option value="3">3名</option>
-                <option value="4">4名</option>
-                <option value="5">5名</option>
-                <option value="6">6名以上</option>
-              </select>
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>ご要望</span>
-              <textarea name="requests" rows="3" placeholder="アレルギーや記念日メッセージなど"></textarea>
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <div class="notice">reCAPTCHA v3でスパム対策予定／送信で仮予約となります。</div>
-            <div class="form-actions">
-              <button type="submit">送信する</button>
-              <small>送信後、担当者より確認のお電話をいたします。</small>
+        </article>
+
+        <article class="card">
+          <picture>
+            <source srcset="/shared/img/fondue.webp" type="image/webp" />
+            <img src="/shared/img/fondue.jpg" alt="チーズフォンデュののびるチーズ" loading="lazy" width="800" height="534">
+          </picture>
+          <div class="card-body">
+            <h3>チーズフォンデュ</h3>
+            <p class="mini">3種ブレンドのコク。季節野菜とバゲットで楽しくシェア。</p>
+            <p class="price">¥1,980〜</p>
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <a class="btn btn--ghost" href="/cheese-fondue/">詳しく見る</a>
+              <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">このメニューで予約</a>
             </div>
-            <div id="reserve-feedback" aria-live="polite"></div>
-          </form>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- コース -->
+    <section class="container" aria-labelledby="course-title">
+      <h2 id="course-title" class="sec-ttl">名物入りコースで、迷わず満足</h2>
+      <div class="grid-2">
+        <div>
+          <h3>女子会・誕生日に人気｜名物満喫コース</h3>
+          <ul class="list">
+            <li>赤身ステーキ / 牛カツ / チーズフォンデュをバランスよく</li>
+            <li>前菜・サラダ・ピザorパスタ・デザート</li>
+            <li>お一人様 ¥4,500〜（飲み放題あり）</li>
+          </ul>
+          <div style="margin-top:10px">
+            <a class="btn btn--primary" href="/course/">コース詳細へ</a>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source srcset="/shared/img/course.webp" type="image/webp" />
+            <img src="/shared/img/course.jpg" alt="コース料理のテーブル写真" loading="lazy" width="900" height="600">
+          </picture>
         </div>
       </div>
     </section>
 
-    <section class="section" id="instagram" aria-labelledby="instagram-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="instagram-heading">Instagram</h2>
-          <p class="section-subtitle">@ku_deta_gifu の最新シーン。来店前にムードをチェック。</p>
+    <!-- シーン -->
+    <section class="container" aria-labelledby="scene-title">
+      <h2 id="scene-title" class="sec-ttl">シーンで選ぶ</h2>
+      <div class="grid-2">
+        <div>
+          <h3>女子会・ママ会</h3>
+          <p class="mini">写真映えのフォンデュ＆パスタ、ノンアルも充実。</p>
         </div>
-        <div class="instagram-grid">
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cw0pTzMy0wT/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CxWES5zy5zX/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cv2Xh5fSP1U/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CuIxwNfSOR8/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CtFd8YPSl2b/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CshzHWcyXUo/" data-instgrm-version="14" style="background:#fff;padding:0;" loading="lazy"></blockquote>
+        <div>
+          <h3>誕生日・記念日</h3>
+          <p class="mini">メッセージプレート対応。サプライズの段取りもご相談を。</p>
         </div>
-        <script async src="https://www.instagram.com/embed.js"></script>
+        <div>
+          <h3>デート・夜ごはん</h3>
+          <p class="mini">カウンターや2名テーブルで、ゆっくり赤身を。</p>
+        </div>
+        <div>
+          <h3>貸切・団体</h3>
+          <p class="mini">最大40名。マイク・BGM・レイアウト相談可。駐車場25台。</p>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="recruit" aria-labelledby="recruit-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="recruit-heading">採用情報</h2>
-          <p class="section-subtitle">「接客・空間・雰囲気」も私たちの商品。一緒に、心も体も元気にするお店をつくりませんか？</p>
+    <!-- 口コミ（ダミー表示。後でAPI連携可） -->
+    <section class="container" aria-labelledby="review-title">
+      <h2 id="review-title" class="sec-ttl">お客様の声</h2>
+      <div class="reviews">
+        <div class="review"><strong>★★★★★</strong><br>赤身300gでも重くない！焼き加減が最高でした。（30代女性）</div>
+        <div class="review"><strong>★★★★☆</strong><br>牛カツのレア断面に感動。衣がサクサクで香りがいい。（20代男性）</div>
+        <div class="review"><strong>★★★★★</strong><br>フォンデュが盛り上がる。誕生日プレートも可愛かった！（40代女性）</div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="container" aria-labelledby="access-title">
+      <h2 id="access-title" class="sec-ttl">アクセス・店舗情報</h2>
+      <div class="grid-2">
+        <div class="foot-info">
+          <dl>
+            <dt>店名</dt><dd>CHEESE MEAT MANIA KU-DETA（クーデター）</dd>
+          </dl>
+          <dl>
+            <dt>住所</dt><dd>〒500-8463 岐阜県岐阜市加納新本町3-1-1 SPAZIO B1F</dd>
+          </dl>
+          <dl>
+            <dt>アクセス</dt><dd>JR岐阜駅から徒歩10分／駐車場25台</dd>
+          </dl>
+          <dl>
+            <dt>営業時間</dt>
+            <dd>ランチ 11:00-15:00（L.O.14:00）<br>ディナー 平日18:00-23:00／土日祝17:30-23:00（L.O.22:00）</dd>
+          </dl>
+          <dl>
+            <dt>定休日</dt><dd>木曜日</dd>
+          </dl>
+          <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap">
+            <a class="btn btn--ghost" href="tel:0582742212">058-274-2212</a>
+            <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">ネット予約（24H）</a>
+            <a class="btn" href="https://www.instagram.com/ku_deta11029/" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn" href="https://line.me/R/ti/p/%40rzd2388u" target="_blank" rel="noopener">LINE友だち</a>
+          </div>
         </div>
-        <div class="card-grid two">
-          <article class="card">
-            <h3>求めるマインド</h3>
-            <ul>
-              <li>お客様の笑顔と体験価値を第一に考えられる</li>
-              <li>チームで連携し、活気ある現場を楽しめる</li>
-              <li>料理・接客・空間づくりすべてに好奇心を持てる</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>評価制度（100点満点）</h3>
-            <ol>
-              <li>ホスピタリティ（20点）</li>
-              <li>商品理解（15点）</li>
-              <li>チーム連携（15点）</li>
-              <li>スピード＆正確性（15点）</li>
-              <li>クリエイティビティ（15点）</li>
-              <li>セルフケア＆成長意欲（20点）</li>
-            </ol>
-          </article>
-        </div>
-        <div class="card" style="margin-top:2rem;">
-          <h3>応募フォーム</h3>
-          <form id="recruit-form" novalidate>
-            <label>
-              <span>氏名 *</span>
-              <input type="text" name="applicant" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>連絡先（メールまたは電話） *</span>
-              <input type="text" name="contact" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>希望職種 *</span>
-              <select name="position" required>
-                <option value="">選択してください</option>
-                <option value="kitchen">キッチン</option>
-                <option value="service">ホール・バーテンダー</option>
-                <option value="manager">マネジメント</option>
-                <option value="part-time">アルバイト</option>
-              </select>
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>勤務可能時間 *</span>
-              <input type="text" name="availability" placeholder="例：平日18:00以降、土日終日" required />
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>自由記述</span>
-              <textarea name="message" rows="3" placeholder="志望動機やスキルなど"></textarea>
-              <span class="error-message" aria-live="polite"></span>
-            </label>
-            <label>
-              <span>履歴書（PDF） *</span>
-              <input type="file" name="resume" accept="application/pdf" required />
-              <span class="error-message" aria-live="polite" data-error="resume"></span>
-            </label>
-            <div class="form-actions">
-              <button type="submit">応募する</button>
-              <small>送信後3営業日以内にご連絡いたします。</small>
-            </div>
-            <div id="recruit-feedback" aria-live="polite"></div>
-          </form>
+        <div>
+          <iframe title="KU-DETAへの地図" src="https://www.google.com/maps?q=KU-DETA%20%E5%B2%90%E9%98%9C&output=embed" width="100%" height="320" style="border:0;border-radius:16px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+    </section>
+
+    <!-- ブログ新着（ダミー） -->
+    <section class="container" aria-labelledby="blog-title">
+      <h2 id="blog-title" class="sec-ttl">ブログ新着</h2>
+      <div class="blog-list">
+        <article class="post">
+          <img src="/shared/img/blog1.jpg" alt="赤身ステーキの記事サムネ" loading="lazy">
+          <div class="p-body">
+            <time datetime="2025-11-15">2025.11.15</time>
+            <h3><a href="/blog/steak-300g/">赤身ステーキ300gが軽いのに満足な理由</a></h3>
+            <p class="mini">部位・焼き・ソース。旨みのピークを見つけました。</p>
+          </div>
+        </article>
+        <article class="post">
+          <img src="/shared/img/blog2.jpg" alt="牛カツの記事サムネ" loading="lazy">
+          <div class="p-body">
+            <time datetime="2025-11-05">2025.11.05</time>
+            <h3><a href="/blog/gyukatsu-howto/">牛カツは“温度”で決まる。レア断面の作り方</a></h3>
+            <p class="mini">二度揚げ×余熱で香りを閉じ込める技。</p>
+          </div>
+        </article>
+        <article class="post">
+          <img src="/shared/img/blog3.jpg" alt="チーズフォンデュの記事サムネ" loading="lazy">
+          <div class="p-body">
+            <time datetime="2025-10-28">2025.10.28</time>
+            <h3><a href="/blog/fondue-best/">チーズフォンデュを一番おいしく食べる順番</a></h3>
+            <p class="mini">のびる瞬間を逃さない、小さなコツ。</p>
+          </div>
+        </article>
+      </div>
+      <div style="margin-top:12px"><a class="btn btn--ghost" href="/blog/">もっと読む</a></div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h2>KU-DETA</h2>
-        <p>肉とチーズ、そして空間とサービスで「心も体も元気に」を届けます。</p>
-      </div>
-      <div class="footer-nav">
-        <a href="#menu">メニュー</a>
-        <a href="#course">コース</a>
-        <a href="#wine">ワイン</a>
-        <a href="#reserve">予約</a>
-        <a href="#recruit">採用情報</a>
-      </div>
-      <div class="footer-cta">
-        <strong>すぐに予約する</strong>
-        <a class="reserve-button" data-reserve-link href="#reserve">オンライン予約</a>
-        <a data-phone-link href="tel:0580000000">電話：<span data-bind="phone"></span></a>
-        <a data-instagram-link href="https://www.instagram.com/ku_deta_gifu/" target="_blank" rel="noopener">Instagramで最新情報</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
+    <div class="container foot-grid">
       <div>
-        <p>住所：<span data-bind="address"></span></p>
-        <p>営業時間：<span data-bind="hours"></span></p>
+        <strong>KU-DETA</strong>
+        <div class="foot-info">
+          <dl><dt>住所</dt><dd>岐阜県岐阜市加納新本町3-1-1 SPAZIO B1F</dd></dl>
+          <dl><dt>電話</dt><dd><a href="tel:0582742212">058-274-2212</a></dd></dl>
+          <dl><dt>予約</dt><dd><a href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener">24時間ネット予約</a></dd></dl>
+        </div>
+        <address>© KU-DETA. All Rights Reserved.</address>
       </div>
       <div>
-        <p>&copy; <span id="current-year"></span> KU-DETA. All Rights Reserved.</p>
+        <nav aria-label="フッターナビ" class="list">
+          <a href="/">ホーム</a>
+          <a href="/steak/">赤身ステーキ</a>
+          <a href="/gyukatsu/">牛カツ</a>
+          <a href="/cheese-fondue/">チーズフォンデュ</a>
+          <a href="/course/">コース</a>
+          <a href="/menu/">メニュー</a>
+          <a href="/floor/">席・貸切</a>
+          <a href="/access/">アクセス</a>
+          <a href="/blog/">ブログ</a>
+          <a href="/recruit/">採用</a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  <script defer src="main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const year = new Date().getFullYear();
-      const yearEl = document.getElementById('current-year');
-      if (yearEl) {
-        yearEl.textContent = year;
-      }
-    });
+  <!-- スマホ用 固定CTA -->
+  <div class="sticky-cta" aria-hidden="false">
+    <div class="container">
+      <a class="btn" href="tel:0582742212" aria-label="電話で問い合わせ 058-274-2212">電話</a>
+      <a class="btn btn--primary" href="https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/" target="_blank" rel="noopener" aria-label="24時間ネット予約">予約する</a>
+    </div>
+  </div>
+
+  <!-- 構造化データ：Restaurant / WebSite / Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KU-DETA",
+    "url": "https://www.ku-deta.jp/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.ku-deta.jp/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "CHEESE MEAT MANIA KU-DETA",
+    "url": "https://www.ku-deta.jp/",
+    "telephone": "+81-58-274-2212",
+    "image": "https://www.ku-deta.jp/shared/img/shared/ogp.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "加納新本町3-1-1 SPAZIO B1F",
+      "addressLocality": "岐阜市",
+      "addressRegion": "岐阜県",
+      "postalCode": "500-8463",
+      "addressCountry": "JP"
+    },
+    "servesCuisine": ["Steak","Hamburg","Cheese Fondue","Italian"],
+    "priceRange": "¥¥",
+    "acceptsReservations": "True",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Friday"],"opens":"18:00","closes":"23:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","PublicHolidays"],"opens":"17:30","closes":"23:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"11:00","closes":"15:00"}
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ku_deta11029/"
+    ],
+    "makesOffer": [{
+      "@type": "Offer",
+      "name": "ネット予約（24時間）",
+      "url": "https://www.hotpepper.jp/strJ001108576/yoyaku/hpds/",
+      "availability": "https://schema.org/InStock"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.ku-deta.jp/"}
+    ]
+  }
   </script>
 </body>
 </html>
